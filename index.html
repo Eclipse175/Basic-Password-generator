@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Password Generator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id = 'parent'>
-            <h1>Password Generator</h1>
-            <input id = ='slider' type = 'range'>
-            <input id = 'input-field' type="text">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Password Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+    <div id='parent'>
+        <h1>Password Generator</h1>
+
+        <div id='range'>
+            <input id=='slider' type='range' value='0'>
         </div>
-    
-        
-        <script src="app.js" async defer></script>
-    </body>
+        <div id = 'generator'>
+            <input id='input-field' type="text">
+            <div id='copy-password'><img src = 'paste.png'></div>
+        </div>
+    </div>
+
+
+    <script src="app.js" async defer></script>
+</body>
+
 </html>

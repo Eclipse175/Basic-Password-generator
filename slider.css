@@ -1,0 +1,30 @@
+#range{
+    background-color:#0096FF ;
+    width:280px;
+    height:62px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5rem;
+    border-radius: 10px;
+}
+input[type ='range']{
+    display:block;
+}
+input[type ='range']::-webkit-slider-runnable-track {
+    height:8px;
+    background-color:gray;
+    border-radius:100px;
+}
+input[type ='range']::-webkit-slider-thumb {
+    height:20px;
+    width:30px;
+    margin-top:-4px;
+    pointer-events: auto;
+}
+
+#slider{
+    overflow:hidden;
+    color:black;
+    background-color:black;
+}
