@@ -2,15 +2,27 @@ const InputField = document.getElementById('input-field');
 const randomSlider = document.getElementById('slider');
 const copyPassword = document.querySelector('button');
 
-var alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
- 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+function generatePassword(length) {
+    let password = "";
+    let possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]";
 
-function randomPassword() {
-    let random = alphabets[Math.floor(Math.random()*alphabets.length)]
-    console.log(random);
+    for (let i = 0; i < length; i++) {
+        password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
+    }
+    return password
 }
-randomPassword();
+// was having an issue where the slider value returned null and this link below helped understand the issue :
+// https://codingbeautydev.com/blog/javascript-cannot-read-property-addeventlistener-of-null/
 
+randomSlider.addEventListener("input", () => {
+    InputField.value = generatePassword(16)
+});
+copyPassword.addEventListener('click', ()=> {
+    InputField.select();
+    // what happens here is that the text inside the inputField gets selected and copied with writeText()
+    navigator.clipboard.writeText(InputField.value)
+    alert('password has been copied :)')
+})
 InputField.addEventListener('keypress', (e) => {
     if (e.key === "Enter") {
         e.preventDefault();
