@@ -7,7 +7,6 @@ var alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 function randomPassword() {
     let random = alphabets[Math.floor(Math.random()*alphabets.length)]
-    joinedAlphabets += random
     console.log(random);
 }
 randomPassword();
