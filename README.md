@@ -1,3 +1,3 @@
 # Password-Generator
 
-Check it out here : https://tourmaline-axolotl-9f1a15.netlify.app/
+Check it out here : https://brilliant-belekoy-31739d.netlify.app/
